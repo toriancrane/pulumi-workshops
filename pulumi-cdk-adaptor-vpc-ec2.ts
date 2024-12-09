@@ -1,3 +1,4 @@
+import * as pulumi from "@pulumi/pulumi";
 import * as aws from '@pulumi/aws';
 import * as pulumicdk from '@pulumi/cdk';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
@@ -53,4 +54,4 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App) => {
     };
 })
 
-export const publicIp = app.outputs['publicIp']
+export const publicIp = pulumi.interpolate`http://${app.outputs['publicIp']}`
