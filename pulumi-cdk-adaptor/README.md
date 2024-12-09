@@ -12,6 +12,6 @@ jest-junit @pulumi/aws @types/jest @pulumi/pulumi \
 @types/mock-fs @types/archiver @types/fs-extra \
 npm-check-updates typescript-eslint @pulumi/aws-native \
 @pulumi/docker-build eslint-config-prettier \
-typedoc-plugin-markdown @aws-cdk/aws-apprunner-alpha
+typedoc-plugin-markdown
 ```
 
