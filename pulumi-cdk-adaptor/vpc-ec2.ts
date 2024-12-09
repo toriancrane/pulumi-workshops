@@ -11,6 +11,7 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App) => {
 
     const vpc = new ec2.Vpc(stack, 'MainVPC', {
         maxAzs: 2,
+        natGateways: 1,
     });
 
     const securityGroup = new ec2.SecurityGroup(stack, 'WebServerSG', {
