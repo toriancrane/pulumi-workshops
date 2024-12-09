@@ -3,7 +3,9 @@ import * as pulumicdk from '@pulumi/cdk';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 
 const app = new pulumicdk.App('app', (scope: pulumicdk.App) => {
+    
     //// CDK Resources ////
+    
     const stack = new pulumicdk.Stack(scope, 'vpc-stack');
 
     const vpc = new ec2.Vpc(stack, 'MainVPC', {
