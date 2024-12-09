@@ -4,7 +4,7 @@ import * as ec2 from 'aws-cdk-lib/aws-ec2';
 
 const app = new pulumicdk.App('app', (scope: pulumicdk.App) => {
     
-    //// CDK Resources ////
+    //// CDK Adaptor Resources ////
     
     const stack = new pulumicdk.Stack(scope, 'vpc-stack');
 
@@ -24,7 +24,7 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App) => {
         'Allow HTTP access from anywhere'
     );
 
-    //// Pulumi Resources ////
+    //// Pulumi Native Resources ////
 
     const userData = `
     #!/bin/bash
